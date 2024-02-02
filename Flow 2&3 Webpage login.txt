@@ -1,0 +1,67 @@
+//	FLOW 1 - to check login
+		dr.get("https://www.saucedemo.com/");
+		
+		String arr[][]= { {"standard_user","problem_user"
+			              ,"performance_glitch_user","error_user","visual_user","locked_out_user"} ,
+				       {"secret_sauce","secret_sauce","secret_sauce",
+			            "secret_sauce","secret_sauce","secret_sauce"}};
+		
+		for(int i=0; i<arr[1].length ; i++){
+ 
+			
+ 
+			dr.findElement(By.id("user-name")).sendKeys(arr[0][i]);
+ 
+			dr.findElement(By.id("password")).sendKeys(arr[1][i]);
+ 
+			//Click on Submit button
+			dr.findElement(By.id("login-button")).click();
+ 
+			dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			dr.findElement(By.id("react-burger-menu-btn")).click();
+			Thread.sleep(5);
+			
+			//Log out
+		    dr.findElement(By.id("logout_sidebar_link")).click();  
+			           
+			    }
+		
+		
+		
+		//Flow 2 - add to cart and checkout
+		
+//		dr.findElement(By.id("user-name")).sendKeys("standard_user");
+//		dr.findElement(By.id("password")).sendKeys("secret_sauce");
+//		dr.findElement(By.id("login-button")).click();
+//		
+//		dr.findElement(By.id("react-burger-menu-btn")).click();
+//		dr.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		
+//		dr.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+//		dr.findElement(By.className("shopping_cart_link")).click();
+//		dr.findElement(By.id("remove-sauce-labs-backpack")).click();
+//		dr.findElement(By.id("checkout")).click();
+//		dr.findElement(By.id("first-name")).sendKeys("Volte");
+//		dr.findElement(By.id("last-name")).sendKeys("Money");
+//		dr.findElement(By.id("postal-code")).sendKeys("640000");
+//		dr.findElement(By.id("continue")).click();
+//		dr.findElement(By.id("finish")).click();
+		
+		
+		
+		//Flow 3 -- remove from cart
+		
+		
+//		dr.get("https://www.saucedemo.com/");
+//		dr.findElement(By.id("user-name")).sendKeys("standard_user");
+//		dr.findElement(By.id("password")).sendKeys("secret_sauce");
+//		dr.findElement(By.id("login-button")).click();
+//		dr.findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt")).click();
+//		dr.findElement(By.className("shopping_cart_link")).click();
+//		dr.findElement(By.id("remove-sauce-labs-bolt-t-shirt")).click();
+		
+		
+		
+	}
+}
+ 
